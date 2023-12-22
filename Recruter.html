@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="style7.css">
+
+<body>
+    <form action="">
+        <div class="container">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <h5>Job_Posts</h5>
+                    <select name="JobPosts" class="form-control" required>
+                        <option selected disabled value="Not Selected">Choose...</option>
+                        <option value="Network Administrator">Network Administrator</option>
+                        <option value="System Analysis">System Analysis</option>
+                        <option value="Database Administrator">Database Administrator</option>
+                        <option value="Full stack Developer">Full stack Developer</option>
+                        <option value="Senior Software Engineer">Senior Software Engineer</option>
+                        <option value="Data Scientist">Data Scientist</option>
+                        <option value="Andriod Developer">Andriod Developer</option>
+                        <option value="Hardware Engineer">Hardware Engineer</option>
+                        <option value="IT Security Specialist">IT Security Specialist</option>
+                        <option value="Cloud Engineer">Cloud Engineer</option>
+                        <option value="Analytics Manager">Analytics Manager</option>
+                        <option value="Web Administrator">Web Administrator</option>
+                        <option value="Project Manager">Project Manager</option>
+                        <option value="Recruitment Manager">Recruitment Manager</option>
+                        <option value="HR Executive">HR Executive</option>
+                        <option value="Help Desk Analyst">Help Desk Analyst</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <h5><label for="validationServer10" class="inputskills">Skills Required</label></h5>
+                    <input type="text" class="form-control is valid" id="validationServer10"
+                        placeholder="Skills_Required" name="SkillsRequired" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <h5><label for="validationServer11" class="inputwork">Work Experience</label></h5>
+                    <input type="text" class="form-control is valid" id="validationServer11"
+                        placeholder="Work_experience" name="Workexperience" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <h5><label for="validationServer12" class="inputdescription">Job Description</label></h5>
+                    <input type="text" class="form-control is valid" id="validationServer12"
+                        placeholder="Job_Description" name="JobDescription" required>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <h5><label for="validationServer13" class="inputsalary">Estimated Salary</label></h5>
+                    <input type="text" class="form-control is valid" id="validationServer13"
+                        placeholder="Estimated_Salary" name="EstimatedSalary" required>
+                </div>
+            </div>
+
+
+            
+
+
+            <button class="btn btn-primary" name="submit">Submit</button>
+            <!-- <button class="btn btn-secondary" type="reset" name="reset">Reset</button> -->
+        </div>
+
+    </form>
+</body>
+
+
+<script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxtajIF1jTu9HwQKNwlG-F-KYjQzSx1cB60Afjj_YX7WBqsvmp-u9vrVeL7Imuib6Js/exec"
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+</html>

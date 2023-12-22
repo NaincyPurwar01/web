@@ -1,0 +1,12 @@
+.container{
+    margin-top: 10%;
+    border: 1cm;
+}
+body{
+    background-color: rgba(129, 99, 99, 0.252);
+}
+
+table, th, td {
+    padding: 4px 0;
+    border: 1px solid black;
+}

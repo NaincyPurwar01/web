@@ -1,0 +1,17 @@
+.mx-auto{
+    margin-top: 5%;
+}
+body{
+    background-color: rgb(226, 241, 241);
+}
+/* .block-color{
+    background-color: rgb(3, 48, 48);
+
+} */
+/* .form-group{
+    background-color: azure;
+
+} */
+.form-control {
+    background-color: rgb(226, 241, 241);
+  }
